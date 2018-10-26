@@ -1,0 +1,19 @@
+packages
+nodejs
+
+npm=> node package manager
+
+package.json
+
+
+
+
+JSON=> Javascript object notation
+{
+    name:"malabika",
+    class:"React"
+},
+{
+    name:"aakash",
+    class:"React"
+}
