@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
+
+import Home from '../containers/Home';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 
 class App extends Component {
   render() {
     return (
-      <div>
-        Hello to redux
-      </div>
+      <BrowserRouter>
+        <div>
+          <Header/>
+          <Switch>
+            <Route exact path="/" component={Home}/>
+          </Switch>
+          <Footer/>
+        </div>
+      </BrowserRouter>
     );
   }
 }
