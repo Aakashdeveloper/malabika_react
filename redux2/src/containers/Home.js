@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
+import { latestNews} from '../actions';
 import { connect } from 'react-redux';
-import { bindActionCreaters } from 'redux';
+import { bindActionCreators } from 'redux';
 
 import LatestNews from '../components/home/latest'
 
@@ -13,7 +14,7 @@ class Home extends Component {
     render(){
         return (
             <div>
-                <LatestNews/>
+                <LatestNews latest={this.props.articles.latest}/>
             </div>
         )
     }
@@ -26,7 +27,7 @@ function mapStateToProps(state){
 }
 
 function mapDispatchToProps(dispatch){
-    return bindActionCreaters({latestNews}, dispatch)
+    return bindActionCreators({latestNews}, dispatch)
 }
 
 export default connect (mapStateToProps, mapDispatchToProps) (Home);
